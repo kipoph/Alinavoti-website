@@ -121,7 +121,27 @@
                 radial-gradient(circle at 80% 70%, rgba(150, 200, 255, 0.2) 0%, transparent 50%);
             pointer-events: none;
         }
-
+        @media (min-width: 769px) { /* Added a new breakpoint for desktop layout */
+    .hero-content {
+        flex-direction: row; /* Side-by-side on large screens */
+        text-align: left; /* Align text left when beside the image */
+    }
+    .hero-text {
+        flex: 1;
+        text-align: left; /* Override the default centered text */
+    }
+    .hero-image {
+        flex: 1;
+        max-width: 50%; /* Image takes half the space */
+    }
+    h1 {
+        font-size: 5em; /* Make the title bigger for desktop impact */
+        text-align: left;
+    }
+    .subtitle {
+        text-align: left;
+    }
+}
         h1 {
             font-size: 4em;
             font-weight: bold;
